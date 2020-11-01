@@ -114,6 +114,7 @@
       grid-area: article1;
       border: 1px solid $color_linia_gris_fosca;
       background-color: $color_fons_blanc;
+      width: 100%;
 
       section {
         display: flex;
@@ -247,7 +248,7 @@
         align-items: center;
         justify-content: space-between;
         height: 10%;
-        border: 1px solid red;
+        padding-bottom: 0.5em;
 
         h1 {
           margin-left: 1em;
@@ -272,7 +273,6 @@
           "img p p p p"
           "img ranking messages button num";
         margin-left: 1em;
-        border: 1px solid red;
 
         p {
           color: $color_text_1;
@@ -364,11 +364,9 @@
       }
 
       section:last-of-type {
-        display:flex;
+        display: flex;
         height: 10%;
         border-bottom: none;
-
-      border: 1px solid red;
 
         div {
           display: flex;
@@ -400,7 +398,7 @@
         section {
           display: grid;
           margin-top: 1em;
-          height: 22%;
+          height: 12%;
           border-bottom: 1px solid $color_linia_gris_fosca;
           grid-template-columns: 5em 4em 3.4em 28em 4em;
           grid-template-rows: 1.5em 1.5em 2em;
@@ -506,20 +504,27 @@
           flex-flow: row;
           align-items: center;
           justify-content: space-between;
-          height: 10%;
+          height: 5%;
 
           h1 {
             margin-left: 1em;
           }
 
-          img {
-            width: 0.9em;
-            margin-right: 1.2em;
+          div {
+            display: flex;
+            height: 100%;
+            width: auto;
+            align-items: center;
+
+            p:first-of-type {
+              font-weight: 600;
+            }
           }
         }
 
         section:last-of-type {
-          height: 9%;
+          display: flex;
+          height: 5%;
           border-bottom: none;
 
           div {
