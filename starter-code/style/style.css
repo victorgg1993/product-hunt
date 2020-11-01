@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*@import './LG.scss';*/
 /* Extra Large >= 1200px */
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -58,11 +59,14 @@ table {
 @media (min-width: 992px) {
   body {
     display: grid;
-    grid-template-columns: 0.5fr 1.5fr 1.5fr 1fr 0.5fr;
+    grid-template-columns: 12em 17em 28em 20em 1em;
     grid-template-rows: 0.3fr 0.2fr 0.3fr 0.7fr 2.1fr;
     gap: 1em 1em;
     grid-template-areas: "nav nav nav nav nav" "s_left article1 article1 article1 s_right" "s_left article2 article2 kittybot s_right" "s_left article2 article2 lifechat s_right" "s_left article3 article3 lifechat s_right";
     background-color: #f9f9f9;
+  }
+  body button:hover {
+    cursor: pointer;
   }
   body #banda_esquerra {
     grid-area: s_left;
@@ -141,12 +145,12 @@ table {
   body nav #articulo_0 section:last-of-type img:hover {
     cursor: pointer;
   }
-  body #articulo_1 {
+  body #articulo_welcome {
     grid-area: article1;
     border: 1px solid #f2f2f2;
     background-color: white;
   }
-  body #articulo_1 section {
+  body #articulo_welcome section {
     display: flex;
     height: 100%;
     flex-flow: row;
@@ -155,28 +159,28 @@ table {
     align-content: center;
     align-self: center;
   }
-  body #articulo_1 section img:first-of-type {
+  body #articulo_welcome section img:first-of-type {
     display: flex;
     margin-left: 3em;
     align-self: center;
     align-items: center;
     width: 2em;
   }
-  body #articulo_1 section h1 {
+  body #articulo_welcome section h1 {
     display: flex;
     font-size: 14px;
     font-weight: 600;
   }
-  body #articulo_1 section p {
+  body #articulo_welcome section p {
     display: flex;
     font-size: 14px;
   }
-  body #articulo_1 section input {
+  body #articulo_welcome section input {
     display: flex;
     width: 13em;
     height: 2.5em;
   }
-  body #articulo_1 section button {
+  body #articulo_welcome section button {
     display: flex;
     align-items: center;
     align-self: center;
@@ -188,15 +192,16 @@ table {
     border-radius: 0.3em;
     padding: 0em 1em;
   }
-  body #articulo_1 section button:hover {
+  body #articulo_welcome section button:hover {
     background-color: #c73006;
   }
-  body #articulo_1 section img:last-of-type {
+  body #articulo_welcome section img:last-of-type {
     display: flex;
     margin-left: 3em;
     width: 0.9em;
+    margin-right: 0.9em;
   }
-  body #articulo_1 section img:last-of-type:hover {
+  body #articulo_welcome section img:last-of-type:hover {
     cursor: pointer;
   }
   body #kittybot {
@@ -245,14 +250,259 @@ table {
   body #kittybot section button:hover {
     background-color: #c73006;
   }
-  body #articulo_2 {
+  body #articulo_popular {
     grid-area: article2;
     background-color: white;
     border: 1px solid #f2f2f2;
   }
-  body #articulo_3 {
+  body #articulo_popular section:first-of-type {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+  }
+  body #articulo_popular section:first-of-type h1 {
+    margin-left: 1em;
+  }
+  body #articulo_popular section:first-of-type img {
+    width: 0.9em;
+    margin-right: 1.2em;
+  }
+  body #articulo_popular section {
+    display: grid;
+    margin-top: 1em;
+    height: 27%;
+    border-bottom: 1px solid #f2f2f2;
+    grid-template-columns: 5em 4em 3.4em 28em 4em;
+    grid-template-rows: 1.5em 1.5em 2em;
+    gap: 0em 0em;
+    grid-template-areas: "img h1 h1 h1 h1" "img p p p p" "img ranking messages button num";
+    margin-left: 1em;
+  }
+  body #articulo_popular section p {
+    color: #a7a8af;
+  }
+  body #articulo_popular section img {
+    grid-area: img;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+  body #articulo_popular section h1 {
+    grid-area: h1;
+    margin-left: 1em;
+    font-weight: 600;
+  }
+  body #articulo_popular section p:first-of-type {
+    grid-area: p;
+    margin-left: 1em;
+  }
+  body #articulo_popular section div:first-of-type {
+    /*ranking*/
+    grid-area: ranking;
+    display: flex;
+    align-self: center;
+    justify-self: flex-end;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  body #articulo_popular section div:first-of-type p {
+    display: flex;
+    margin-left: -0.3em;
+  }
+  body #articulo_popular section div:first-of-type img {
+    display: flex;
+    width: 1em;
+    height: 1em;
+  }
+  body #articulo_popular section div:last-of-type {
+    /*messages*/
+    grid-area: messages;
+    display: flex;
+    align-self: center;
+    justify-self: flex-end;
+    justify-content: center;
+    align-content: center;
+    padding: 0.3em;
+  }
+  body #articulo_popular section div:last-of-type p {
+    display: flex;
+    margin-left: 0.2em;
+  }
+  body #articulo_popular section div:last-of-type img {
+    display: flex;
+    width: 1em;
+    height: 1em;
+  }
+  body #articulo_popular section button {
+    display: flex;
+    align-self: center;
+    justify-self: flex-end;
+    justify-content: center;
+    align-content: center;
+    grid-area: button;
+    width: 5em;
+    height: 1.5em;
+  }
+  body #articulo_popular section p:last-of-type {
+    display: flex;
+    align-self: center;
+    grid-area: num;
+    margin-left: 1em;
+  }
+  body #articulo_popular img:hover {
+    /* comú */
+    cursor: pointer;
+  }
+  body #articulo_popular section:last-of-type {
+    height: 1em;
+    border-bottom: none;
+    border: 1px solid black;
+  }
+  body #articulo_popular section:last-of-type div {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+  body #articulo_popular section:last-of-type div img {
+    display: flex;
+    margin-right: 1em;
+    margin-top: 0.5em;
+  }
+  body #articulo_popular section:last-of-type div p {
+    display: flex;
+    margin-top: 0.5em;
+  }
+  body #articulo_today {
     grid-area: article3;
     background-color: white;
+    border: 1px solid #f2f2f2;
+  }
+  body #articulo_today article {
+    height: 100%;
+  }
+  body #articulo_today article section {
+    display: grid;
+    margin-top: 1em;
+    height: 27%;
+    border-bottom: 1px solid #f2f2f2;
+    grid-template-columns: 5em 4em 3.4em 28em 4em;
+    grid-template-rows: 1.5em 1.5em 2em;
+    gap: 0em 0em;
+    grid-template-areas: "img h1 h1 h1 h1" "img p p p p" "img ranking messages button num";
+    margin-left: 1em;
+  }
+  body #articulo_today article section p {
+    color: #a7a8af;
+  }
+  body #articulo_today article section img {
+    grid-area: img;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+  body #articulo_today article section h1 {
+    grid-area: h1;
+    margin-left: 1em;
+    font-weight: 600;
+  }
+  body #articulo_today article section p:first-of-type {
+    grid-area: p;
+    margin-left: 1em;
+  }
+  body #articulo_today article section div:first-of-type {
+    /*ranking*/
+    grid-area: ranking;
+    display: flex;
+    align-self: center;
+    justify-self: flex-end;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  body #articulo_today article section div:first-of-type p {
+    display: flex;
+    margin-left: -0.3em;
+  }
+  body #articulo_today article section div:first-of-type img {
+    display: flex;
+    width: 1em;
+    height: 1em;
+  }
+  body #articulo_today article section div:last-of-type {
+    /*messages*/
+    grid-area: messages;
+    display: flex;
+    align-self: center;
+    justify-self: flex-end;
+    justify-content: center;
+    align-content: center;
+    padding: 0.3em;
+  }
+  body #articulo_today article section div:last-of-type p {
+    display: flex;
+    margin-left: 0.2em;
+  }
+  body #articulo_today article section div:last-of-type img {
+    display: flex;
+    width: 1em;
+    height: 1em;
+  }
+  body #articulo_today article section button {
+    display: flex;
+    align-self: center;
+    justify-self: flex-end;
+    justify-content: center;
+    align-content: center;
+    grid-area: button;
+    width: 5em;
+    height: 1.5em;
+  }
+  body #articulo_today article section p:last-of-type {
+    display: flex;
+    align-self: center;
+    grid-area: num;
+    margin-left: 1em;
+  }
+  body #articulo_today article img:hover {
+    /* comú */
+    cursor: pointer;
+  }
+  body #articulo_today article section:first-of-type {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+  }
+  body #articulo_today article section:first-of-type h1 {
+    margin-left: 1em;
+  }
+  body #articulo_today article section:first-of-type img {
+    width: 0.9em;
+    margin-right: 1.2em;
+  }
+  body #articulo_today article section:last-of-type {
+    height: 9%;
+    border-bottom: none;
+  }
+  body #articulo_today article section:last-of-type div {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+  body #articulo_today article section:last-of-type div img {
+    display: flex;
+    margin-right: 1em;
+    margin-top: 0.5em;
+  }
+  body #articulo_today article section:last-of-type div p {
+    display: flex;
+    margin-top: 0.5em;
   }
   body aside {
     grid-area: lifechat;
@@ -310,426 +560,25 @@ table {
 }
 /* Large >= 992px      @media (min-width: 992px) */
 /* Medium >= 768px */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: #aff19b;
+  }
+}
 /* Medium >= 768px     @media (min-width: 768px) and (max-width: 991px) */
 /* Small >= 576px */
 @media (min-width: 576px) and (max-width: 767px) {
-  html {
-    min-width: 800px;
-    background-color: #fffec4;
-  }
-  html body {
-    padding: 0%;
-    margin: auto;
-    background: #f9f9f9;
-    width: 80%;
-    height: auto;
-  }
-  html body a {
-    text-decoration: none;
-    color: #7e6b6b;
-  }
-  html body p {
-    margin: 0;
-  }
-  html body p .likes,
-html body p .comments {
-    font-size: 12px;
-    background-repeat: no-repeat;
-    border: solid 1px lightgray;
-    border-radius: 2px;
-    background-color: #ebebeb;
-    padding-right: 5px;
-    padding-left: 20px;
-  }
-  html body p .likes {
-    background-image: url("./images/votes.png");
-    background-position-y: -2px;
-  }
-  html body p .comments {
-    background-position-x: 5px;
-    background-position-y: 2px;
-    color: gray;
-    background-image: url("./images/comments.png");
-  }
-  html body p .tag {
-    font-size: 10px;
-    background-repeat: no-repeat;
-    border: none;
-    background-color: lightgray;
-    border-radius: 4px;
-    padding: 3px;
-  }
-  html body p .moreTags {
-    margin-left: 0px;
-    line-height: 15px;
-    font-size: 11px;
-    color: gray;
-  }
-  html body p .tech1 {
-    color: gray;
-    font-size: 11px;
-    background-repeat: no-repeat;
-    background-size: 15px;
-    background-position-y: -1px;
-    padding-left: 18px;
-  }
-  html body p .remindButton {
-    font-size: 11px;
-    text-align: center;
-    border: none;
-    background-color: lightgray;
-    border-radius: 4px;
-    width: 70%;
-    padding: 0px;
-  }
-  html body nav {
-    position: fixed;
-    top: 0;
-    background: white;
-    width: 80%;
-    height: auto;
-  }
-  html body nav > div {
-    color: #7e6b6b;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-  }
-  html body nav > div > img {
-    height: 120%;
-    width: auto;
-  }
-  html body nav > div > input {
-    border: solid 1px #ebebeb;
-    border-radius: 4px;
-    background-image: url("./images/search.png");
-    background-repeat: no-repeat;
-    padding-left: 25px;
-    width: 80%;
-    height: 60%;
-  }
-  html body nav > div:last-of-type {
-    padding-right: 0%;
-    border-top: solid 1px #ebebeb;
-    border-bottom: solid 1px #ebebeb;
-    width: 100%;
-  }
-  html body nav > div:last-of-type > ul {
-    margin: 0%;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-    list-style: none;
-    overflow: hidden;
-  }
-  html body nav > div:last-of-type > ul > li {
-    line-height: 40px;
-    font-size: 17px;
-    display: inline;
-    padding: 10px;
-  }
-  html body nav > div:last-of-type > ul > li:first-of-type {
-    font-weight: bold;
-    background-color: #ebebeb;
-    height: 100%;
-  }
-  html body nav > div:last-of-type > div {
-    display: flex;
-  }
-  html body nav > div:last-of-type > div > img {
-    height: 16px;
-  }
-  html body header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    background: white;
-    width: 100%;
-    height: 100%;
-    border: solid 1px #ebebeb;
-    border-radius: 4px;
-  }
-  html body header > div > div > * {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  html body header > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-  }
-  html body header > div > div:first-of-type {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: 50px;
-  }
-  html body header > div > div:last-of-type {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  html body header p {
-    height: 30px;
-    line-height: 30px;
-    font-size: 12px;
-    text-overflow: ellipsis;
-  }
-  html body header p:last-of-type {
-    color: #7e6b6b;
-  }
-  html body header input {
-    height: 26px;
-    border: solid 1px #ebebeb;
-    width: 60%;
-  }
-  html body header button {
-    border-radius: 4px;
-    color: white;
-    font-size: 12px;
-    background-color: #ca5609;
-    height: 30px;
-    width: 30%;
-    border: solid 1px #ebebeb;
-  }
-  html body img .welcomeImg {
-    width: auto;
-    height: 80%;
-  }
-  html body img .crossIcon {
-    margin-right: 5px;
-    margin-left: 30px;
-    height: 13px;
-    width: auto;
-  }
-  html body main {
-    float: left;
-    width: 70%;
-    height: auto;
-  }
-  html body section #popular {
-    width: 97%;
-    height: auto;
-    padding-left: 3%;
-    padding-top: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #ebebeb;
-    background-color: white;
-    border-radius: 4px;
-  }
-  html body section #today {
-    width: 97%;
-    height: auto;
-    padding-left: 3%;
-    padding-top: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #ebebeb;
-    background-color: white;
-    border-radius: 4px;
-  }
-  html body section #today > div.sectionHeader > div {
-    font-size: 12px;
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-  }
-  html body section #today > div.sectionHeader > div > p:last-of-type {
-    margin-left: 10px;
-    color: grey;
-  }
-  html body div .sectionHeader {
-    padding-left: 2%;
-    padding-right: 2%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: solid 1px #ebebeb;
-    width: 96%;
-    height: 25px;
-  }
-  html body div .sectionHeader > div {
-    height: 100%;
-    width: 200px;
-  }
-  html body div .sectionPost {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 120px;
-    margin-bottom: 5px;
-    border-bottom: solid 1px #ebebeb;
-  }
-  html body div .sectionPost > img {
-    background: midnightblue;
-    width: 80px;
-    height: 80px;
-  }
-  html body div .sectionPost > div:first-of-type {
-    padding-left: 10px;
-    width: 70%;
-    height: 80px;
-  }
-  html body div .sectionPost > div:first-of-type > p:first-of-type {
-    width: 90%;
-    height: 30px;
-    font-size: 20px;
-  }
-  html body div .sectionPost > div:first-of-type > p:last-of-type {
-    color: gray;
-    width: 90%;
-    height: 20px;
-    font-size: 13px;
-  }
-  html body div .sectionPost > div:first-of-type > div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 90%;
-    height: 30px;
-  }
-  html body div .sectionPost > div:first-of-type > div > * {
-    margin-right: 10px;
-  }
-  html body div .sectionPost > div:last-of-type {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 100px;
-    height: 80px;
-    margin-right: 10px;
-  }
-  html body div #asideTop {
-    background: white;
-    width: 95%;
-    height: 120px;
-    margin-bottom: 10px;
-    border: solid 1px #ebebeb;
-    background-color: white;
-    border-radius: 4px;
-    padding-left: 5%;
-  }
-  html body div #asideTop > div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 18px;
-    width: 100%;
-    height: 25px;
-    padding-top: 5px;
-    margin-bottom: 5px;
-  }
-  html body div #asideTop > p {
-    font-size: 14px;
-    color: grey;
-    margin-bottom: 10px;
-  }
-  html body div #showMore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  html body div #showMore > p {
-    font-size: 11px;
-    width: fit-content;
-    color: gray;
-    background-image: url("./images/arrow-down.png");
-    background-repeat: no-repeat;
-    background-size: 10px;
-    background-position-x: 5px;
-    background-position-y: 2px;
-    padding-left: 20px;
-  }
-  html body div #asideChat {
-    border: solid 1px #ebebeb;
-    background-color: white;
-    border-radius: 4px;
-    padding-left: 5%;
-    width: 95%;
-    height: 100%;
-    margin-bottom: 10px;
-  }
-  html body div #asideChat > div#asideChatHeader {
-    font-weight: bold;
-    font-size: 12px;
-    width: 100%;
-    height: 40px;
-    margin-bottom: 5px;
-    line-height: 40px;
-    border-bottom: solid 1px #ebebeb;
-  }
-  html body div .asidePost {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    margin-bottom: 5px;
-  }
-  html body div .asidePost > img {
-    width: 50px;
-    height: 50px;
-    margin-right: 5px;
-    border-radius: 50%;
-  }
-  html body div .asidePost > div {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 75%;
-    height: auto;
-  }
-  html body div .asidePost > div > p:first-of-type {
-    font-weight: bold;
-    font-size: 13px;
-  }
-  html body div .asidePost > div > p:nth-of-type(2) {
-    color: grey;
-    font-size: 13px;
-  }
-  html body div #asideFooter > p {
-    font-size: 13px;
-    text-align: center;
-    justify-content: center;
-    color: red;
-    border-top: solid 1px #ebebeb;
-    width: 100%;
-    padding-top: 5px;
-    margin-bottom: 20px;
-  }
-  html body aside {
-    width: 25%;
-    height: 100%;
-    float: right;
-  }
-  html body button#asideKittyButton {
-    border: solid 1px #ebebeb;
-    border-radius: 4px;
-    color: white;
-    font-size: 11px;
-    height: 30px;
-    width: 95%;
-    padding-left: 15px;
-    background-color: #ca5609;
-    background-image: url("./images/hashIcon.png");
-    background-repeat: no-repeat;
-    background-size: 20px;
-    background-position-x: 10%;
-    background-position-y: 4px;
+  body {
+    background-color: #f1b69b;
   }
 }
 /* Small >= 576px      @media (min-width: 576px) and (max-width: 767px) */
 /* Extra small < 576px */
+@media (max-width: 575px) {
+  body {
+    background-color: #9bb9f1;
+  }
+}
 /* Extra small < 576px @media (max-width: 575px) */
 
 /*# sourceMappingURL=style.css.map */

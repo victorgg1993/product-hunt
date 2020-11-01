@@ -3,7 +3,7 @@
 @media (min-width: 992px) {
   body {
     display: grid;
-    grid-template-columns: 0.5fr 1.5fr 1.5fr 1fr 0.5fr;
+    grid-template-columns: 12em 17em 28em 20em 1em;
     grid-template-rows: 0.3fr 0.2fr 0.3fr 0.7fr 2.1fr;
     gap: 1em 1em;
     grid-template-areas:
@@ -12,9 +12,12 @@
       "s_left article2 article2 kittybot s_right"
       "s_left article2 article2 lifechat s_right"
       "s_left article3 article3 lifechat s_right";
-      
-      background-color: #f9f9f9;
 
+    background-color: #f9f9f9;
+
+    button:hover {
+      cursor: pointer;
+    }
 
     #banda_esquerra {
       grid-area: s_left;
@@ -107,7 +110,7 @@
       }
     }
 
-    #articulo_1 {
+    #articulo_welcome {
       grid-area: article1;
       border: 1px solid $color_linia_gris_fosca;
       background-color: $color_fons_blanc;
@@ -134,15 +137,18 @@
           font-size: 14px;
           font-weight: 600;
         }
+
         p {
           display: flex;
           font-size: 14px;
         }
+
         input {
           display: flex;
           width: 13em;
           height: 2.5em;
         }
+
         button {
           display: flex;
           align-items: center;
@@ -164,6 +170,7 @@
           display: flex;
           margin-left: 3em;
           width: 0.9em;
+          margin-right: 0.9em;
         }
 
         img:last-of-type:hover {
@@ -229,15 +236,305 @@
       }
     }
 
-    #articulo_2 {
+    #articulo_popular {
       grid-area: article2;
       background-color: $color_fons_blanc;
       border: 1px solid $color_linia_gris_fosca;
+
+      section:first-of-type {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 10%;
+
+        h1 {
+          margin-left: 1em;
+        }
+
+        img {
+          width: 0.9em;
+          margin-right: 1.2em;
+        }
+      }
+
+      section {
+        display: grid;
+        margin-top: 1em;
+        height: 27%;
+        border-bottom: 1px solid $color_linia_gris_fosca;
+        grid-template-columns: 5em 4em 3.4em 28em 4em;
+        grid-template-rows: 1.5em 1.5em 2em;
+        gap: 0em 0em;
+        grid-template-areas:
+          "img h1 h1 h1 h1"
+          "img p p p p"
+          "img ranking messages button num";
+        margin-left: 1em;
+
+        p {
+          color: $color_text_1;
+        }
+
+        img {
+          grid-area: img;
+          display: flex;
+          align-self: center;
+          justify-self: center;
+        }
+        h1 {
+          grid-area: h1;
+          margin-left: 1em;
+          font-weight: 600;
+        }
+        p:first-of-type {
+          grid-area: p;
+          margin-left: 1em;
+        }
+
+        div:first-of-type {
+          /*ranking*/
+          grid-area: ranking;
+          display: flex;
+          align-self: center;
+          justify-self: flex-end;
+          justify-content: center;
+          align-content: center;
+          width: 100%;
+          height: 100%;
+
+          p {
+            display: flex;
+            margin-left: -0.3em;
+          }
+
+          img {
+            display: flex;
+            width: 1em;
+            height: 1em;
+          }
+        }
+
+        div:last-of-type {
+          /*messages*/
+          grid-area: messages;
+          display: flex;
+          align-self: center;
+          justify-self: flex-end;
+          justify-content: center;
+          align-content: center;
+          padding: 0.3em;
+
+          p {
+            display: flex;
+            margin-left: 0.2em;
+          }
+
+          img {
+            display: flex;
+            width: 1em;
+            height: 1em;
+          }
+        }
+
+        button {
+          display: flex;
+          align-self: center;
+          justify-self: flex-end;
+          justify-content: center;
+          align-content: center;
+          grid-area: button;
+          width: 5em;
+          height: 1.5em;
+        }
+
+        p:last-of-type {
+          display: flex;
+          align-self: center;
+          grid-area: num;
+          margin-left: 1em;
+        }
+      }
+
+      img:hover {
+        /* comú */
+        cursor: pointer;
+      }
+
+      section:last-of-type {
+        height: 1em;
+        border-bottom: none;
+        border: 1px solid black;
+
+        div {
+          display: flex;
+          flex-flow: row;
+          justify-content: center;
+
+          img {
+            display: flex;
+            margin-right: 1em;
+            margin-top: 0.5em;
+          }
+
+          p {
+            display: flex;
+            margin-top: 0.5em;
+          }
+        }
+      }
     }
 
-    #articulo_3{
+    #articulo_today {
       grid-area: article3;
       background-color: $color_fons_blanc;
+      border: 1px solid $color_linia_gris_fosca;
+
+      article {
+        height: 100%;
+
+        section {
+          display: grid;
+          margin-top: 1em;
+          height: 27%;
+          border-bottom: 1px solid $color_linia_gris_fosca;
+          grid-template-columns: 5em 4em 3.4em 28em 4em;
+          grid-template-rows: 1.5em 1.5em 2em;
+          gap: 0em 0em;
+          grid-template-areas:
+            "img h1 h1 h1 h1"
+            "img p p p p"
+            "img ranking messages button num";
+          margin-left: 1em;
+
+          p {
+            color: $color_text_1;
+          }
+
+          img {
+            grid-area: img;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+          }
+          h1 {
+            grid-area: h1;
+            margin-left: 1em;
+            font-weight: 600;
+          }
+          p:first-of-type {
+            grid-area: p;
+            margin-left: 1em;
+          }
+
+          div:first-of-type {
+            /*ranking*/
+            grid-area: ranking;
+            display: flex;
+            align-self: center;
+            justify-self: flex-end;
+            justify-content: center;
+            align-content: center;
+            width: 100%;
+            height: 100%;
+
+            p {
+              display: flex;
+              margin-left: -0.3em;
+            }
+
+            img {
+              display: flex;
+              width: 1em;
+              height: 1em;
+            }
+          }
+
+          div:last-of-type {
+            /*messages*/
+            grid-area: messages;
+            display: flex;
+            align-self: center;
+            justify-self: flex-end;
+            justify-content: center;
+            align-content: center;
+            padding: 0.3em;
+
+            p {
+              display: flex;
+              margin-left: 0.2em;
+            }
+
+            img {
+              display: flex;
+              width: 1em;
+              height: 1em;
+            }
+          }
+
+          button {
+            display: flex;
+            align-self: center;
+            justify-self: flex-end;
+            justify-content: center;
+            align-content: center;
+            grid-area: button;
+            width: 5em;
+            height: 1.5em;
+          }
+
+          p:last-of-type {
+            display: flex;
+            align-self: center;
+            grid-area: num;
+            margin-left: 1em;
+          }
+        }
+
+        img:hover {
+          /* comú */
+          cursor: pointer;
+        }
+
+        section:first-of-type {
+          display: flex;
+          flex-flow: row;
+          align-items: center;
+          justify-content: space-between;
+          height: 10%;
+
+          h1 {
+            margin-left: 1em;
+          }
+
+          img {
+            width: 0.9em;
+            margin-right: 1.2em;
+          }
+        }
+
+        section:last-of-type {
+          height: 9%;
+          border-bottom: none;
+
+          div {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+
+            img {
+              display: flex;
+              margin-right: 1em;
+              margin-top: 0.5em;
+            }
+
+            p {
+              display: flex;
+              margin-top: 0.5em;
+            }
+          }
+        }
+      }
     }
 
     aside {
