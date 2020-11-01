@@ -4,7 +4,7 @@
   body {
     display: grid;
     grid-template-columns: 12em 17em 28em 20em 1em;
-    grid-template-rows: 0.3fr 0.2fr 0.3fr 0.7fr 2.1fr;
+    grid-template-rows: 6em 4em 11em 12em 48em;
     gap: 1em 1em;
     grid-template-areas:
       "nav nav nav nav nav"
@@ -247,6 +247,7 @@
         align-items: center;
         justify-content: space-between;
         height: 10%;
+        border: 1px solid red;
 
         h1 {
           margin-left: 1em;
@@ -261,7 +262,7 @@
       section {
         display: grid;
         margin-top: 1em;
-        height: 27%;
+        height: 50%;
         border-bottom: 1px solid $color_linia_gris_fosca;
         grid-template-columns: 5em 4em 3.4em 28em 4em;
         grid-template-rows: 1.5em 1.5em 2em;
@@ -271,6 +272,7 @@
           "img p p p p"
           "img ranking messages button num";
         margin-left: 1em;
+        border: 1px solid red;
 
         p {
           color: $color_text_1;
@@ -362,9 +364,11 @@
       }
 
       section:last-of-type {
-        height: 1em;
+        display:flex;
+        height: 10%;
         border-bottom: none;
-        border: 1px solid black;
+
+      border: 1px solid red;
 
         div {
           display: flex;
@@ -396,7 +400,7 @@
         section {
           display: grid;
           margin-top: 1em;
-          height: 27%;
+          height: 22%;
           border-bottom: 1px solid $color_linia_gris_fosca;
           grid-template-columns: 5em 4em 3.4em 28em 4em;
           grid-template-rows: 1.5em 1.5em 2em;
@@ -416,6 +420,7 @@
             display: flex;
             align-self: center;
             justify-self: center;
+            width: 5em;
           }
           h1 {
             grid-area: h1;
@@ -479,8 +484,8 @@
             justify-content: center;
             align-content: center;
             grid-area: button;
-            width: 5em;
-            height: 1.5em;
+            width: auto;
+            height: auto;
           }
 
           p:last-of-type {

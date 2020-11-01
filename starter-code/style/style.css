@@ -60,7 +60,7 @@ table {
   body {
     display: grid;
     grid-template-columns: 12em 17em 28em 20em 1em;
-    grid-template-rows: 0.3fr 0.2fr 0.3fr 0.7fr 2.1fr;
+    grid-template-rows: 6em 4em 11em 12em 48em;
     gap: 1em 1em;
     grid-template-areas: "nav nav nav nav nav" "s_left article1 article1 article1 s_right" "s_left article2 article2 kittybot s_right" "s_left article2 article2 lifechat s_right" "s_left article3 article3 lifechat s_right";
     background-color: #f9f9f9;
@@ -261,6 +261,7 @@ table {
     align-items: center;
     justify-content: space-between;
     height: 10%;
+    border: 1px solid red;
   }
   body #articulo_popular section:first-of-type h1 {
     margin-left: 1em;
@@ -272,13 +273,14 @@ table {
   body #articulo_popular section {
     display: grid;
     margin-top: 1em;
-    height: 27%;
+    height: 50%;
     border-bottom: 1px solid #f2f2f2;
     grid-template-columns: 5em 4em 3.4em 28em 4em;
     grid-template-rows: 1.5em 1.5em 2em;
     gap: 0em 0em;
     grid-template-areas: "img h1 h1 h1 h1" "img p p p p" "img ranking messages button num";
     margin-left: 1em;
+    border: 1px solid red;
   }
   body #articulo_popular section p {
     color: #a7a8af;
@@ -358,9 +360,10 @@ table {
     cursor: pointer;
   }
   body #articulo_popular section:last-of-type {
-    height: 1em;
+    display: flex;
+    height: 10%;
     border-bottom: none;
-    border: 1px solid black;
+    border: 1px solid red;
   }
   body #articulo_popular section:last-of-type div {
     display: flex;
@@ -387,7 +390,7 @@ table {
   body #articulo_today article section {
     display: grid;
     margin-top: 1em;
-    height: 27%;
+    height: 22%;
     border-bottom: 1px solid #f2f2f2;
     grid-template-columns: 5em 4em 3.4em 28em 4em;
     grid-template-rows: 1.5em 1.5em 2em;
@@ -403,6 +406,7 @@ table {
     display: flex;
     align-self: center;
     justify-self: center;
+    width: 5em;
   }
   body #articulo_today article section h1 {
     grid-area: h1;
@@ -459,8 +463,8 @@ table {
     justify-content: center;
     align-content: center;
     grid-area: button;
-    width: 5em;
-    height: 1.5em;
+    width: auto;
+    height: auto;
   }
   body #articulo_today article section p:last-of-type {
     display: flex;
