@@ -59,7 +59,7 @@ table {
 @media (min-width: 992px) {
   body {
     display: grid;
-    grid-template-columns: 12em 17em 28em 20em 1em;
+    grid-template-columns: 8em 17em 28em 20em 7em;
     grid-template-rows: 6em 4em 11em 12em 48em;
     gap: 1em 1em;
     grid-template-areas: "nav nav nav nav nav" "s_left article1 article1 article1 s_right" "s_left article2 article2 kittybot s_right" "s_left article2 article2 lifechat s_right" "s_left article3 article3 lifechat s_right";
@@ -77,8 +77,8 @@ table {
     flex-flow: column;
     justify-self: center;
     height: auto;
-    width: 100vw;
     position: fixed;
+    width: 100%;
     border: 1px solid #f2f2f2;
     background-color: white;
   }
@@ -89,7 +89,7 @@ table {
   }
   body nav #articulo_0 section {
     display: flex;
-    width: 78vw;
+    width: 78%;
     align-self: center;
     justify-content: space-between;
     flex-flow: row;
@@ -149,7 +149,7 @@ table {
     grid-area: article1;
     border: 1px solid #f2f2f2;
     background-color: white;
-    width: 100%;
+    width: 78.5vw;
   }
   body #articulo_welcome section {
     display: flex;
@@ -159,6 +159,7 @@ table {
     align-items: center;
     align-content: center;
     align-self: center;
+    width: 100%;
   }
   body #articulo_welcome section img:first-of-type {
     display: flex;
@@ -382,11 +383,9 @@ table {
     grid-area: article3;
     background-color: white;
     border: 1px solid #f2f2f2;
-  }
-  body #articulo_today article {
     height: 100%;
   }
-  body #articulo_today article section {
+  body #articulo_today section {
     display: grid;
     margin-top: 1em;
     height: 12%;
@@ -397,26 +396,26 @@ table {
     grid-template-areas: "img h1 h1 h1 h1" "img p p p p" "img ranking messages button num";
     margin-left: 1em;
   }
-  body #articulo_today article section p {
+  body #articulo_today section p {
     color: #a7a8af;
   }
-  body #articulo_today article section img {
+  body #articulo_today section img {
     grid-area: img;
     display: flex;
     align-self: center;
     justify-self: center;
     width: 5em;
   }
-  body #articulo_today article section h1 {
+  body #articulo_today section h1 {
     grid-area: h1;
     margin-left: 1em;
     font-weight: 600;
   }
-  body #articulo_today article section p:first-of-type {
+  body #articulo_today section p:first-of-type {
     grid-area: p;
     margin-left: 1em;
   }
-  body #articulo_today article section div:first-of-type {
+  body #articulo_today section div:first-of-type {
     /*ranking*/
     grid-area: ranking;
     display: flex;
@@ -427,16 +426,16 @@ table {
     width: 100%;
     height: 100%;
   }
-  body #articulo_today article section div:first-of-type p {
+  body #articulo_today section div:first-of-type p {
     display: flex;
     margin-left: -0.3em;
   }
-  body #articulo_today article section div:first-of-type img {
+  body #articulo_today section div:first-of-type img {
     display: flex;
     width: 1em;
     height: 1em;
   }
-  body #articulo_today article section div:last-of-type {
+  body #articulo_today section div:last-of-type {
     /*messages*/
     grid-area: messages;
     display: flex;
@@ -446,16 +445,16 @@ table {
     align-content: center;
     padding: 0.3em;
   }
-  body #articulo_today article section div:last-of-type p {
+  body #articulo_today section div:last-of-type p {
     display: flex;
     margin-left: 0.2em;
   }
-  body #articulo_today article section div:last-of-type img {
+  body #articulo_today section div:last-of-type img {
     display: flex;
     width: 1em;
     height: 1em;
   }
-  body #articulo_today article section button {
+  body #articulo_today section button {
     display: flex;
     align-self: center;
     justify-self: flex-end;
@@ -465,51 +464,51 @@ table {
     width: auto;
     height: auto;
   }
-  body #articulo_today article section p:last-of-type {
+  body #articulo_today section p:last-of-type {
     display: flex;
     align-self: center;
     grid-area: num;
     margin-left: 1em;
   }
-  body #articulo_today article img:hover {
+  body #articulo_today img:hover {
     /* comú */
     cursor: pointer;
   }
-  body #articulo_today article section:first-of-type {
+  body #articulo_today section:first-of-type {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
     height: 5%;
   }
-  body #articulo_today article section:first-of-type h1 {
+  body #articulo_today section:first-of-type h1 {
     margin-left: 1em;
   }
-  body #articulo_today article section:first-of-type div {
+  body #articulo_today section:first-of-type div {
     display: flex;
     height: 100%;
     width: auto;
     align-items: center;
   }
-  body #articulo_today article section:first-of-type div p:first-of-type {
+  body #articulo_today section:first-of-type div p:first-of-type {
     font-weight: 600;
   }
-  body #articulo_today article section:last-of-type {
+  body #articulo_today section:last-of-type {
     display: flex;
     height: 5%;
     border-bottom: none;
   }
-  body #articulo_today article section:last-of-type div {
+  body #articulo_today section:last-of-type div {
     display: flex;
     flex-flow: row;
     justify-content: center;
   }
-  body #articulo_today article section:last-of-type div img {
+  body #articulo_today section:last-of-type div img {
     display: flex;
     margin-right: 1em;
     margin-top: 0.5em;
   }
-  body #articulo_today article section:last-of-type div p {
+  body #articulo_today section:last-of-type div p {
     display: flex;
     margin-top: 0.5em;
   }
@@ -572,17 +571,16 @@ table {
 @media (min-width: 768px) and (max-width: 991px) {
   body {
     display: grid;
-    grid-template-columns: 12em 17em 28em 20em 1em;
+    grid-template-columns: 0em 17em 28em 0em;
     grid-template-rows: 6em 4em 11em 12em 48em;
     gap: 1em 1em;
-    grid-template-areas: "nav nav nav nav nav" "s_left article1 article1 article1 s_right" "s_left article2 article2 kittybot s_right" "s_left article2 article2 lifechat s_right" "s_left article3 article3 lifechat s_right";
+    grid-template-areas: "s_left nav nav s_right" "s_left article1 article1 s_right" "s_left article2 article2 s_right" "s_left article2 article2 s_right" "s_left article3 article3 s_right";
     background-color: #f9f9f9;
   }
   body button:hover {
     cursor: pointer;
   }
   body #banda_esquerra {
-    visibility: hidden;
     grid-area: s_left;
     height: 100vh;
   }
@@ -591,10 +589,11 @@ table {
     flex-flow: column;
     justify-self: center;
     height: auto;
-    width: 100vw;
     position: fixed;
     border: 1px solid #f2f2f2;
     background-color: white;
+    width: 100vw;
+    border: 1px solid red;
   }
   body nav #articulo_0 {
     display: flex;
@@ -603,7 +602,7 @@ table {
   }
   body nav #articulo_0 section {
     display: flex;
-    width: 78vw;
+    width: 78%;
     align-self: center;
     justify-content: space-between;
     flex-flow: row;
@@ -663,7 +662,7 @@ table {
     grid-area: article1;
     border: 1px solid #f2f2f2;
     background-color: white;
-    width: 100%;
+    width: 46em;
   }
   body #articulo_welcome section {
     display: flex;
@@ -673,6 +672,7 @@ table {
     align-items: center;
     align-content: center;
     align-self: center;
+    width: 100%;
   }
   body #articulo_welcome section img:first-of-type {
     display: flex;
@@ -897,11 +897,9 @@ table {
     grid-area: article3;
     background-color: white;
     border: 1px solid #f2f2f2;
-  }
-  body #articulo_today article {
     height: 100%;
   }
-  body #articulo_today article section {
+  body #articulo_today section {
     display: grid;
     margin-top: 1em;
     height: 12%;
@@ -912,26 +910,26 @@ table {
     grid-template-areas: "img h1 h1 h1 h1" "img p p p p" "img ranking messages button num";
     margin-left: 1em;
   }
-  body #articulo_today article section p {
+  body #articulo_today section p {
     color: #a7a8af;
   }
-  body #articulo_today article section img {
+  body #articulo_today section img {
     grid-area: img;
     display: flex;
     align-self: center;
     justify-self: center;
     width: 5em;
   }
-  body #articulo_today article section h1 {
+  body #articulo_today section h1 {
     grid-area: h1;
     margin-left: 1em;
     font-weight: 600;
   }
-  body #articulo_today article section p:first-of-type {
+  body #articulo_today section p:first-of-type {
     grid-area: p;
     margin-left: 1em;
   }
-  body #articulo_today article section div:first-of-type {
+  body #articulo_today section div:first-of-type {
     /*ranking*/
     grid-area: ranking;
     display: flex;
@@ -942,16 +940,16 @@ table {
     width: 100%;
     height: 100%;
   }
-  body #articulo_today article section div:first-of-type p {
+  body #articulo_today section div:first-of-type p {
     display: flex;
     margin-left: -0.3em;
   }
-  body #articulo_today article section div:first-of-type img {
+  body #articulo_today section div:first-of-type img {
     display: flex;
     width: 1em;
     height: 1em;
   }
-  body #articulo_today article section div:last-of-type {
+  body #articulo_today section div:last-of-type {
     /*messages*/
     grid-area: messages;
     display: flex;
@@ -961,16 +959,16 @@ table {
     align-content: center;
     padding: 0.3em;
   }
-  body #articulo_today article section div:last-of-type p {
+  body #articulo_today section div:last-of-type p {
     display: flex;
     margin-left: 0.2em;
   }
-  body #articulo_today article section div:last-of-type img {
+  body #articulo_today section div:last-of-type img {
     display: flex;
     width: 1em;
     height: 1em;
   }
-  body #articulo_today article section button {
+  body #articulo_today section button {
     display: flex;
     align-self: center;
     justify-self: flex-end;
@@ -980,51 +978,51 @@ table {
     width: auto;
     height: auto;
   }
-  body #articulo_today article section p:last-of-type {
+  body #articulo_today section p:last-of-type {
     display: flex;
     align-self: center;
     grid-area: num;
     margin-left: 1em;
   }
-  body #articulo_today article img:hover {
+  body #articulo_today img:hover {
     /* comú */
     cursor: pointer;
   }
-  body #articulo_today article section:first-of-type {
+  body #articulo_today section:first-of-type {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
     height: 5%;
   }
-  body #articulo_today article section:first-of-type h1 {
+  body #articulo_today section:first-of-type h1 {
     margin-left: 1em;
   }
-  body #articulo_today article section:first-of-type div {
+  body #articulo_today section:first-of-type div {
     display: flex;
     height: 100%;
     width: auto;
     align-items: center;
   }
-  body #articulo_today article section:first-of-type div p:first-of-type {
+  body #articulo_today section:first-of-type div p:first-of-type {
     font-weight: 600;
   }
-  body #articulo_today article section:last-of-type {
+  body #articulo_today section:last-of-type {
     display: flex;
     height: 5%;
     border-bottom: none;
   }
-  body #articulo_today article section:last-of-type div {
+  body #articulo_today section:last-of-type div {
     display: flex;
     flex-flow: row;
     justify-content: center;
   }
-  body #articulo_today article section:last-of-type div img {
+  body #articulo_today section:last-of-type div img {
     display: flex;
     margin-right: 1em;
     margin-top: 0.5em;
   }
-  body #articulo_today article section:last-of-type div p {
+  body #articulo_today section:last-of-type div p {
     display: flex;
     margin-top: 0.5em;
   }
@@ -1079,7 +1077,6 @@ table {
     border-radius: 50%;
   }
   body #banda_dreta {
-    visibility: hidden;
     grid-area: s_right;
     height: 100vh;
   }
